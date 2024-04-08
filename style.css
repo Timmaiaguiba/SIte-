@@ -1,0 +1,120 @@
+:root {
+    --cor-de-fundo: #001935; /* Azul escuro para representar o traje do Homem-Aranha */
+    --vermelho: #ff2f2f; /* Vermelho característico do traje */
+    --branco: #FFFFFF;
+    --botao-ativo: #ff2f2f; /* Vermelho para destacar */
+    --botao-inativo: rgba(0, 0, 0, 0.7); /* Preto translúcido para efeito de destaque */
+    --texto-fundo: rgba(255, 255, 255, 0.1);
+  }
+  
+  body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco); /* Texto em branco para contraste */
+    font-family: 'Arial', sans-serif; /* Fonte básica */
+  }
+  
+  .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+  }
+  
+  .titulo-principal span {
+    color: var(--vermelho); /* Destaque em vermelho */
+  }
+  
+  .botao {
+    font-family: "Arial", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+  }
+  
+  .botoes {
+    display: block;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .botoes {
+      display: flex;
+    }
+  }
+  
+  .botao:first-child {
+    border-radius: 40px 40px 0 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .botoes {
+      display: flex;
+    }
+  
+    .botao:first-child {
+      border-radius: 40px 0 0 0;
+    }
+  
+    .botao:last-child {
+      border-radius: 0 40px 0 0;
+    }
+  }
+  
+  .ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--vermelho); /* Destaque vermelho */
+  }
+  
+  .abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+  }
+  
+  .botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--vermelho); /* Destaque vermelho */
+  }
+  
+  .aba-conteudo.ativo{
+    display: block;
+  }
+  
+  .aba-conteudo{
+    display: none;
+  }
+  
+  .aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--vermelho); /* Destaque vermelho */
+    text-transform: uppercase;
+  }
+  
+  .contador{
+    font-size: 72px; /* Tamanho da fonte aumentado */
+    text-align: center; /* Alinhamento centralizado */
+    margin-top: 50px; /* Espaçamento superior para centralizá-lo verticalmente */
+  }
+  
